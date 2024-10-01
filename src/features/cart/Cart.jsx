@@ -23,9 +23,9 @@ const fakeCart = [
     totalPrice: 15,
   },
 ];
-
+console.log(fakeCart);
 function Cart() {
-  const cart = fakeCart;
+  //const cart = fakeCart;
 
   return (
     <div>
