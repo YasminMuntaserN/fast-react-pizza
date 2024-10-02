@@ -6,11 +6,9 @@ import Loader from "./Loader";
 function AppLayout() {
   const navigation = useNavigation();
   const isLoading =navigation.state ==="isLoading";
-  console.log(isLoading);
   return (
     <div className ="grid grid-rows-[auto_1fr_auto] h-screen ">
-      {/* {isLoading && <Loader/>} */}
-      {true && <Loader/>}
+      {isLoading && <Loader/>}
 
       <Header />
       <div className="overflow-scroll">
