@@ -39,6 +39,8 @@ const cartSlice = createSlice({
 
       item.quantity--;
       item.totalPrice = item.quantity * item.unitPrice;
+// If the quantity is 0, call the 'deleteItem' reducer to remove the item from the cart
+      if(item.quantity ===0) cartSlice.caseReducers.deleteItem(state , action);
     },
     clearCart(state) {
       state.cart = [];
